@@ -298,7 +298,12 @@ const AJUSTES_ANTES = [
   },
 ];
 
+// Texto em 1ª pessoa, afirmativo, mostrado no resumo do confessionário no lugar
+// da pergunta (o penitente só lê o que já escolheu). Chave = id da pergunta.
+const RESUMOS = JSON.parse(readFileSync(resolve(__dirname, 'resumos.json'), 'utf8'));
+
 function finalizar(categorias) {
+  const usados = new Set();
   for (const [ci, cat] of categorias.entries()) {
     const prefixo =
       cat.categoria === 'ANTES DOS MANDAMENTOS'
@@ -311,6 +316,14 @@ function finalizar(categorias) {
     });
     if (prefixo === 'ant') {
       cat.perguntas.forEach((p, i) => Object.assign(p, AJUSTES_ANTES[i] ?? {}));
+    }
+    for (const p of cat.perguntas) {
+      if (p.id in RESUMOS) {
+        p.textoResumo = RESUMOS[p.id];
+        usados.add(p.id);
+      } else if (p.tipo !== 'texto' && !p.textoResumo) {
+        console.warn(`AVISO: pergunta sem texto de resumo: ${p.id}`);
+      }
     }
     if (cat.titulo) cat.titulo = tituloBonito(cat.titulo);
     const notas = cat.nota ? separarNotas(cat.nota) : [];
@@ -326,6 +339,9 @@ function finalizar(categorias) {
         ...resto,
       })),
     };
+  }
+  for (const id of Object.keys(RESUMOS)) {
+    if (!usados.has(id)) console.warn(`AVISO: resumo para id inexistente: ${id}`);
   }
   return categorias;
 }
