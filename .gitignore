@@ -1,0 +1,35 @@
+# Dependências do Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Variáveis de ambiente (Segurança: NUNCA envie para o GitHub)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Pastas de Build / Distribuição (Geradas ao compilar o PWA)
+dist/
+build/
+.next/
+out/
+.nuxt/
+
+# Arquivos gerados por ferramentas de PWA (Ex: Workbox, Injete Manifest, etc)
+# Só ignore se o seu script de build gerar esses arquivos automaticamente na raiz
+# service-worker.js
+# sw.js
+
+# Cache de ferramentas e logs
+.eslintcache
+.stylelintcache
+.cache/
+.parcel-cache/
+
+# Arquivos do Sistema Operacional (Evita sujeira no repositório)
+.DS_Store
+Thumbs.db

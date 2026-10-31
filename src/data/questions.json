@@ -1,0 +1,1411 @@
+[
+  {
+    "categoria": "ANTES DOS MANDAMENTOS",
+    "perguntas": [
+      {
+        "id": "ant_1",
+        "texto": "Há quanto tempo não me confesso?",
+        "tipo": "texto",
+        "rotuloResumo": "Minha última confissão foi há",
+        "placeholder": "Ex.: 6 meses, 2 anos…"
+      },
+      {
+        "id": "ant_2",
+        "texto": "Você recebeu absolvição?",
+        "subtexto": "Na última confissão.",
+        "pecadoSe": "nao",
+        "textoResumo": "Não recebi a absolvição na última confissão."
+      },
+      {
+        "id": "ant_3",
+        "texto": "Você cumpriu sua penitência?",
+        "subtexto": "A penitência da última confissão.",
+        "pecadoSe": "nao",
+        "textoResumo": "Não cumpri a penitência da última confissão."
+      },
+      {
+        "id": "ant_4",
+        "texto": "Você deliberadamente ocultou um pecado mortal, ou confessou sem arrependimento verdadeiro, ou sem um firme propósito de correção, ou sem a intenção de cumprir sua penitência?",
+        "textoResumo": "Ocultei deliberadamente um pecado mortal, ou confessei sem arrependimento verdadeiro, ou sem um firme propósito de correção, ou sem a intenção de cumprir a penitência."
+      },
+      {
+        "id": "ant_5",
+        "texto": "Você, após essa má confissão, recebeu a Santa Comunhão em estado de pecado mortal?",
+        "textoResumo": "Após essa má confissão, recebi a Santa Comunhão em estado de pecado mortal."
+      },
+      {
+        "id": "ant_6",
+        "texto": "Quantas dessas Confissões e Comunhões sacrílegas você fez?",
+        "tipo": "texto",
+        "rotuloResumo": "Número de Confissões e Comunhões sacrílegas",
+        "placeholder": "Ex.: 3 vezes",
+        "mostrarSe": [
+          "ant_4",
+          "ant_5"
+        ]
+      },
+      {
+        "id": "ant_7",
+        "texto": "Você, em estado de pecado mortal, recebeu qualquer outro Sacramento?",
+        "textoResumo": "Em estado de pecado mortal, recebi outro Sacramento."
+      }
+    ]
+  },
+  {
+    "categoria": "I MANDAMENTO",
+    "titulo": "Eu sou o Senhor teu Deus, não terás outro deus diante de mim",
+    "perguntas": [
+      {
+        "id": "m1_1",
+        "texto": "Fui negligente na oração?",
+        "subtexto": "Distrações voluntárias, poucas orações."
+      },
+      {
+        "id": "m1_2",
+        "texto": "Fiquei mais de um mês sem rezar?"
+      },
+      {
+        "id": "m1_3",
+        "texto": "Fui ingrato(a) para com Deus?"
+      },
+      {
+        "id": "m1_4",
+        "texto": "Alimentei preguiça espiritual?"
+      },
+      {
+        "id": "m1_5",
+        "texto": "Senti ódio de Deus ou da Igreja Católica?"
+      },
+      {
+        "id": "m1_6",
+        "texto": "Tentei a Deus?",
+        "subtexto": "Explicitamente ou implicitamente, por exemplo, expondo-me a um perigo para a alma, para a vida ou para a saúde sem causa grave."
+      },
+      {
+        "id": "m1_7",
+        "texto": "Deixei de me comportar adequadamente em uma Igreja?",
+        "subtexto": "Por exemplo, não fazer a genuflexão para o Santíssimo Sacramento ao entrar ou sair de uma Igreja, etc."
+      },
+      {
+        "id": "m1_8",
+        "texto": "Tive excessivo apego a coisas/criaturas?",
+        "subtexto": "Por exemplo, afeição exagerada a animais, fanatismo por esportes, ter ídolos de TV, música, cinema, amor pelo dinheiro, prazer ou poder."
+      },
+      {
+        "id": "m1_9",
+        "texto": "Pratiquei idolatria?",
+        "subtexto": "Adorei falsos deuses bem como honrei uma criatura no lugar de Deus: como Satanás, a ciência, os ancestrais, o país."
+      },
+      {
+        "id": "m1_10",
+        "texto": "Acreditei ou pratiquei superstição?",
+        "subtexto": "Atribuí poderes a uma coisa criada que não os possui."
+      },
+      {
+        "id": "m1_11",
+        "texto": "Submeti-me ao hipnotismo?",
+        "subtexto": "Sem causa grave."
+      },
+      {
+        "id": "m1_12",
+        "texto": "Pratiquei adivinhação?",
+        "subtexto": "Comunicação com Satanás, demônios, mortos ou outras práticas falsas para descobrir o desconhecido, consultar horóscopos, astrologia, leitura da mão, ver a sorte, etc."
+      },
+      {
+        "id": "m1_13",
+        "texto": "Atribuí importância indevida aos sonhos, presságios e destino?"
+      },
+      {
+        "id": "m1_14",
+        "texto": "Tomei parte em práticas de magia (branca ou negra) ou feitiçaria?",
+        "subtexto": "Por exemplo, bruxaria, vodu."
+      },
+      {
+        "id": "m1_15",
+        "texto": "Usei amuletos?"
+      },
+      {
+        "id": "m1_16",
+        "texto": "Joguei com quadros Ouija ou mesas giratórias?"
+      },
+      {
+        "id": "m1_17",
+        "texto": "Pratiquei espiritismo?",
+        "subtexto": "Falei com os espíritos."
+      },
+      {
+        "id": "m1_18",
+        "texto": "Cometi sacrilégio?",
+        "subtexto": "Profanei ou tratei indignamente os sacramentos, particularmente a Santa Eucaristia, bem como as demais ações litúrgicas; profanei pessoas religiosas, coisas santas, vasos sagrados ou lugares consagrados a Deus."
+      },
+      {
+        "id": "m1_19",
+        "texto": "Cometi sacrilégio ao receber um sacramento, especialmente a Santa Eucaristia, em estado de pecado mortal?"
+      },
+      {
+        "id": "m1_20",
+        "texto": "Cometi simonia?",
+        "subtexto": "Comprei ou vendi coisas espirituais."
+      },
+      {
+        "id": "m1_21",
+        "texto": "Fiz uso profano ou supersticioso de objetos abençoados?",
+        "subtexto": "Às vezes para me manter no pecado."
+      },
+      {
+        "id": "m1_22",
+        "texto": "Vivi um materialismo prático?",
+        "subtexto": "Acreditei que preciso somente de coisas materiais e desejei somente a elas."
+      },
+      {
+        "id": "m1_23",
+        "texto": "Adotei o humanismo ateu?",
+        "subtexto": "Que considera falsamente que o homem é um fim em si mesmo, com supremo controle sobre sua própria história ou completamente autônomo."
+      },
+      {
+        "id": "m1_24",
+        "texto": "Pratiquei o ateísmo em geral?",
+        "subtexto": "Rejeitei, neguei ou duvidei da existência de Deus, seja em teoria ou na prática, ignorando-O na vida diária."
+      },
+      {
+        "id": "m1_25",
+        "texto": "Adotei o agnosticismo?",
+        "subtexto": "Postulei a existência de um ser transcendental incapaz de se revelar, e sobre quem nada pode ser dito, ou não fiz julgamento sobre a existência de Deus."
+      },
+      {
+        "id": "m1_26",
+        "texto": "Duvidei voluntariamente de algum artigo da fé?",
+        "grupo": "Pecados contra a fé"
+      },
+      {
+        "id": "m1_27",
+        "texto": "Ignorei deliberadamente as verdades da fé que devem ser conhecidas?",
+        "grupo": "Pecados contra a fé"
+      },
+      {
+        "id": "m1_28",
+        "texto": "Falei contra uma doutrina da Igreja Católica?",
+        "grupo": "Pecados contra a fé"
+      },
+      {
+        "id": "m1_29",
+        "texto": "Fui negligente em me instruir na fé segundo o meu próprio estado?",
+        "grupo": "Pecados contra a fé"
+      },
+      {
+        "id": "m1_30",
+        "texto": "Tive credulidade imprudente?",
+        "subtexto": "Como dar crédito a revelações privadas muito facilmente ou acreditar em revelações condenadas pelas autoridades da Igreja.",
+        "grupo": "Pecados contra a fé"
+      },
+      {
+        "id": "m1_31",
+        "texto": "Cometi apostasia?",
+        "subtexto": "Abandonei completamente a fé.",
+        "grupo": "Pecados contra a fé"
+      },
+      {
+        "id": "m1_32",
+        "texto": "Cometi heresia?",
+        "subtexto": "Neguei uma ou mais verdades da fé.",
+        "grupo": "Pecados contra a fé"
+      },
+      {
+        "id": "m1_33",
+        "texto": "Adotei o indiferentismo?",
+        "subtexto": "Acreditei que uma religião é tão boa quanto as demais, que todas são igualmente verdadeiras e agradáveis a Deus, ou que sou livre para aceitar ou rejeitar religiões.",
+        "grupo": "Pecados contra a fé"
+      },
+      {
+        "id": "m1_34",
+        "texto": "Li ou fiz circular livros ou escritos contrários à crença ou à prática Católica, comprometendo a minha fé ou a alheia?",
+        "grupo": "Pecados contra a fé"
+      },
+      {
+        "id": "m1_35",
+        "texto": "Ouvi música cuja letra é contrária à religião católica?",
+        "grupo": "Pecados contra a fé"
+      },
+      {
+        "id": "m1_36",
+        "texto": "Permaneci em silêncio quando questionado sobre minha própria fé por uma autoridade legítima?",
+        "grupo": "Pecados contra a fé"
+      },
+      {
+        "id": "m1_37",
+        "texto": "Tomei parte em um culto herético ou cismático?",
+        "grupo": "Pecados contra a fé"
+      },
+      {
+        "id": "m1_38",
+        "texto": "Ouvi a pregação de um ministro de falsa religião?",
+        "grupo": "Pecados contra a fé"
+      },
+      {
+        "id": "m1_39",
+        "texto": "Aderi ou apoiei grupos maçônicos ou outras sociedades proibidas?",
+        "subtexto": "Teosofia, rosa cruz, Rotary, Lions, etc.",
+        "grupo": "Pecados contra a fé"
+      },
+      {
+        "id": "m1_40",
+        "texto": "Desesperei da misericórdia de Deus?",
+        "subtexto": "Desisti de toda esperança de salvação e dos meios necessários para ser salvo.",
+        "grupo": "Pecados contra a esperança"
+      },
+      {
+        "id": "m1_41",
+        "texto": "Faltei com a confiança no poder de Sua Graça para me apoiar nos apuros ou na tentação?",
+        "grupo": "Pecados contra a esperança"
+      },
+      {
+        "id": "m1_42",
+        "texto": "Deixei de recorrer a Deus e aos santos nos momentos de tentação?",
+        "grupo": "Pecados contra a esperança"
+      },
+      {
+        "id": "m1_43",
+        "texto": "Fiquei sem nenhum desejo de possuir a felicidade eterna no paraíso ou após a vida terrena?",
+        "grupo": "Pecados contra a esperança"
+      },
+      {
+        "id": "m1_44",
+        "texto": "Tive presunção?",
+        "subtexto": "Esperei pela salvação sem a ajuda de Deus, pressupus o perdão sem conversão ou esperei a glória do paraíso sem mérito.",
+        "grupo": "Pecados contra a esperança"
+      },
+      {
+        "id": "m1_45",
+        "texto": "Presumi da misericórdia de Deus ou na suposta eficácia de certas práticas de piedade para continuar no pecado?",
+        "grupo": "Pecados contra a esperança"
+      },
+      {
+        "id": "m1_46",
+        "texto": "Recusei qualquer dependência de Deus?",
+        "grupo": "Pecados contra a esperança"
+      },
+      {
+        "id": "m1_47",
+        "texto": "Deixei de fazer atos de caridade em intervalos regulares, particularmente em momentos de necessidade?",
+        "grupo": "Pecados contra a Caridade"
+      },
+      {
+        "id": "m1_48",
+        "texto": "Fui egoísta?",
+        "subtexto": "Preocupei-me somente comigo mesmo, elogiei-me, fui interesseiro, gostei de receber elogios.",
+        "grupo": "Pecados contra a Caridade"
+      },
+      {
+        "id": "m1_49",
+        "texto": "Tive pensamentos deliberadamente revoltosos contra Deus?",
+        "grupo": "Pecados contra a Caridade"
+      },
+      {
+        "id": "m1_50",
+        "texto": "Vangloriei-me, tive orgulho do próprio pecado ou o alardeei?",
+        "grupo": "Pecados contra a Caridade"
+      },
+      {
+        "id": "m1_51",
+        "texto": "Violei a lei de Deus ou omiti boas obras por respeito humano?",
+        "grupo": "Pecados contra a Caridade"
+      },
+      {
+        "id": "m1_52",
+        "texto": "Fui impaciente diante das adversidades e provações?",
+        "grupo": "Pecados contra a Caridade"
+      }
+    ]
+  },
+  {
+    "categoria": "II MANDAMENTO",
+    "titulo": "Não tomarás o nome do Senhor teu Deus em vão",
+    "perguntas": [
+      {
+        "id": "m2_1",
+        "texto": "Desonrei a Deus por uso profano ou desrespeitoso de seu Nome, do Santo Nome de Jesus Cristo, da Santíssima Virgem Maria ou dos santos?"
+      },
+      {
+        "id": "m2_2",
+        "texto": "Proferi blasfêmia?",
+        "subtexto": "Insultei a Deus, a Nosso Senhor Jesus Cristo, à Igreja Católica, à Santíssima Virgem Maria ou aos santos por palavras ou por gestos."
+      },
+      {
+        "id": "m2_3",
+        "texto": "Ouvi músicas blasfemas?"
+      },
+      {
+        "id": "m2_4",
+        "texto": "Cometi perjúrio?",
+        "subtexto": "Prometi algo sob juramento sem ter a intenção de cumpri-lo, ou quebrei promessa feita sob juramento."
+      },
+      {
+        "id": "m2_5",
+        "texto": "Fiz juramentos falsos ou desnecessários?",
+        "subtexto": "Chamei a Deus como testemunha de uma mentira."
+      },
+      {
+        "id": "m2_6",
+        "texto": "Amaldiçoei a mim mesmo ou a outros?"
+      },
+      {
+        "id": "m2_7",
+        "texto": "Murmurei, reclamando das disposições da providência divina?"
+      },
+      {
+        "id": "m2_8",
+        "texto": "Quebrei votos ou promessas feitas a Deus?"
+      },
+      {
+        "id": "m2_9",
+        "texto": "Fui irreverente na Igreja, falando durante a Missa ou em uma Igreja sem razão suficiente, distraí os demais ou vesti-me de forma inapropriada?"
+      }
+    ]
+  },
+  {
+    "categoria": "III MANDAMENTO",
+    "titulo": "Lembra-te que deves santificar o dia do Senhor",
+    "perguntas": [
+      {
+        "id": "m3_1",
+        "texto": "Omiti a oração e o culto divino, fiz trabalho servil desnecessário ou qualquer coisa que impediu a santificação do dia do Senhor?"
+      },
+      {
+        "id": "m3_2",
+        "texto": "Fiz comércio desnecessário, comprando ou vendendo nos Domingos e Dias de Guarda?"
+      },
+      {
+        "id": "m3_3",
+        "texto": "Profanei estes dias frequentando companhia impiedosa, diversões pecaminosas, jogos de azar, dança indecente ou excedendo-me com bebida?"
+      }
+    ]
+  },
+  {
+    "categoria": "IV MANDAMENTO",
+    "titulo": "Honra teu pai e tua mãe",
+    "perguntas": [
+      {
+        "id": "m4_1",
+        "texto": "Odiei meus filhos?",
+        "grupo": "Para os pais (caso tenha filhos)",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_2",
+        "texto": "Amaldiçoei meus filhos?",
+        "grupo": "Para os pais (caso tenha filhos)",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_3",
+        "texto": "Dei escândalo a eles ao praguejar, beber, etc.?",
+        "grupo": "Para os pais (caso tenha filhos)",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_4",
+        "texto": "Deixei que crescessem na ignorância, indolência ou pecado?",
+        "grupo": "Para os pais (caso tenha filhos)",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_5",
+        "texto": "Demonstrei parcialidade habitual para com os filhos sem causa?",
+        "grupo": "Para os pais (caso tenha filhos)",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_6",
+        "texto": "Adiei o batismo de uma criança?",
+        "subtexto": "Por mais de um mês.",
+        "grupo": "Para os pais (caso tenha filhos)",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_7",
+        "texto": "Fui negligente no cuidado da saúde corporal, instrução religiosa, quanto às companhias, livros ou diversões deles?",
+        "grupo": "Para os pais (caso tenha filhos)",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_8",
+        "texto": "Deixei de corrigi-los quando necessitavam?",
+        "grupo": "Para os pais (caso tenha filhos)",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_9",
+        "texto": "Fui duro(a) ou cruel nas correções?",
+        "grupo": "Para os pais (caso tenha filhos)",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_10",
+        "texto": "Enviei meus filhos para escolas protestantes ou outras escolas perigosas?",
+        "subtexto": "Esotéricas, de outra religião.",
+        "grupo": "Para os pais (caso tenha filhos)",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_11",
+        "texto": "Fui negligente em conduzi-los à Missa aos Domingos e Dias Santos de Guarda e na recepção dos sacramentos?",
+        "grupo": "Para os pais (caso tenha filhos)",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_12",
+        "texto": "Alimentei raiva ou aversão contra meus pais e demais superiores legítimos?",
+        "grupo": "Para os filhos (em relação a pais e superiores)"
+      },
+      {
+        "id": "m4_13",
+        "texto": "Desdenhei dos meus pais?",
+        "grupo": "Para os filhos (em relação a pais e superiores)"
+      },
+      {
+        "id": "m4_14",
+        "texto": "Desejei algum mal a eles?",
+        "grupo": "Para os filhos (em relação a pais e superiores)"
+      },
+      {
+        "id": "m4_15",
+        "texto": "Ameacei-os ou levantei a mão contra eles?",
+        "grupo": "Para os filhos (em relação a pais e superiores)"
+      },
+      {
+        "id": "m4_16",
+        "texto": "Afligi meus pais por ingratidão ou má conduta?",
+        "grupo": "Para os filhos (em relação a pais e superiores)"
+      },
+      {
+        "id": "m4_17",
+        "texto": "Provoquei-os à raiva?",
+        "grupo": "Para os filhos (em relação a pais e superiores)"
+      },
+      {
+        "id": "m4_18",
+        "texto": "Ofendi-os?",
+        "grupo": "Para os filhos (em relação a pais e superiores)"
+      },
+      {
+        "id": "m4_19",
+        "texto": "Insultei-os?",
+        "grupo": "Para os filhos (em relação a pais e superiores)"
+      },
+      {
+        "id": "m4_20",
+        "texto": "Deixei de ajudá-los em suas necessidades?",
+        "grupo": "Para os filhos (em relação a pais e superiores)"
+      },
+      {
+        "id": "m4_21",
+        "texto": "Desprezei ou desobedeci às suas ordens legítimas?",
+        "subtexto": "Sobretudo quanto a más companhias, diversões e deveres de estudo.",
+        "grupo": "Para os filhos (em relação a pais e superiores)"
+      },
+      {
+        "id": "m4_22",
+        "texto": "Maltratei meu cônjuge?",
+        "subtexto": "Tratei-o sem consideração ou sem caridade.",
+        "grupo": "Maridos e esposas",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_23",
+        "texto": "Coloquei obstáculos ao cumprimento de seus deveres religiosos?",
+        "grupo": "Maridos e esposas",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_24",
+        "texto": "Neguei-me a render o débito conjugal sem ter causa realmente justa para tanto?",
+        "grupo": "Maridos e esposas",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_25",
+        "texto": "Faltei com a paciência quanto às faltas do meu cônjuge ou fui duro(a) quanto a elas?",
+        "grupo": "Maridos e esposas",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_26",
+        "texto": "Tive ciúmes despropositados?",
+        "grupo": "Maridos e esposas",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_27",
+        "texto": "Fui negligente nos deveres domésticos?",
+        "grupo": "Maridos e esposas",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_28",
+        "texto": "Tive mau humor ou aborrecimento sem motivo?",
+        "grupo": "Maridos e esposas",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_29",
+        "texto": "Proferi palavras injuriosas?",
+        "grupo": "Maridos e esposas",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_30",
+        "texto": "Fui negligente na busca de meios seguros de sustento da família por preguiça ou timidez?",
+        "grupo": "Maridos e esposas",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_31",
+        "texto": "Desrespeitei ou desobedeci aos superiores espirituais (Papa, bispos, padres) em suas ordens legítimas, ou comportei-me de maneira soberba com eles?",
+        "grupo": "Súditos da Igreja e do Estado"
+      },
+      {
+        "id": "m4_32",
+        "texto": "Recusei-me a rezar por meus superiores ou por sua conversão?",
+        "grupo": "Súditos da Igreja e do Estado"
+      },
+      {
+        "id": "m4_33",
+        "texto": "Deixei de rezar pelo meu país e pelo governo?",
+        "grupo": "Súditos da Igreja e do Estado"
+      },
+      {
+        "id": "m4_34",
+        "texto": "Coloquei o país acima de Deus?",
+        "grupo": "Súditos da Igreja e do Estado"
+      },
+      {
+        "id": "m4_35",
+        "texto": "Tomei parte em questões subversivas?",
+        "subtexto": "Atividades revolucionárias.",
+        "grupo": "Súditos da Igreja e do Estado"
+      },
+      {
+        "id": "m4_36",
+        "texto": "Juntei-me a alguma associação Comunista ou Liberal?",
+        "grupo": "Súditos da Igreja e do Estado"
+      },
+      {
+        "id": "m4_37",
+        "texto": "Resisti às autoridades legais do país, participando de violência ou perturbando a paz pública?",
+        "grupo": "Súditos da Igreja e do Estado"
+      },
+      {
+        "id": "m4_38",
+        "texto": "Votei em partidos comunistas ou socialistas?",
+        "grupo": "Súditos da Igreja e do Estado"
+      },
+      {
+        "id": "m4_39",
+        "texto": "Não permiti aos meus empregados tempo razoável para seus deveres religiosos?",
+        "grupo": "Para os empregadores",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_40",
+        "texto": "Dei mau exemplo a eles ou permiti que outros o fizessem?",
+        "grupo": "Para os empregadores",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_41",
+        "texto": "Não paguei os salários legais/justos?",
+        "grupo": "Para os empregadores",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_42",
+        "texto": "Não cuidei deles na doença?",
+        "grupo": "Para os empregadores",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_43",
+        "texto": "Demiti-os arbitrariamente sem causa?",
+        "grupo": "Para os empregadores",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_44",
+        "texto": "Impus políticas desproporcionadas?",
+        "grupo": "Para os empregadores",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_45",
+        "texto": "Fui desrespeitoso(a) com meus empregadores?",
+        "grupo": "Para os empregados",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_46",
+        "texto": "Faltei com a obediência em matéria à qual me obriguei cumprir por contrato?",
+        "grupo": "Para os empregados",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_47",
+        "texto": "Perdi tempo no trabalho?",
+        "subtexto": "Sobretudo com internet.",
+        "grupo": "Para os empregados",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_48",
+        "texto": "Fui negligente no trabalho?",
+        "grupo": "Para os empregados",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_49",
+        "texto": "Gastei ou danifiquei propriedade do empregador por desonestidade, falta de cuidado ou negligência?",
+        "grupo": "Para os empregados",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_50",
+        "texto": "Violei políticas do local de trabalho sem razão suficiente?",
+        "grupo": "Para os empregados",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_51",
+        "texto": "Tive falta de conhecimento culpável no que se refere aos meus deveres de ofício ou profissão?",
+        "grupo": "Para profissionais ou servidores públicos",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_52",
+        "texto": "Fui negligente na execução de tais deveres?",
+        "grupo": "Para profissionais ou servidores públicos",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_53",
+        "texto": "Cometi injustiça ou parcialidade?",
+        "grupo": "Para profissionais ou servidores públicos",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_54",
+        "texto": "Fui negligente no progresso daqueles confiados ao meu cuidado?",
+        "grupo": "Para os professores",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_55",
+        "texto": "Apliquei punição injusta, inconsiderada ou excessiva?",
+        "grupo": "Para os professores",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_56",
+        "texto": "Fui parcial?",
+        "grupo": "Para os professores",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_57",
+        "texto": "Dei mau exemplo?",
+        "grupo": "Para os professores",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_58",
+        "texto": "Ensinei coisas falsas ou incertas como verdadeiras?",
+        "grupo": "Para os professores",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_59",
+        "texto": "Fui desrespeitoso(a)?",
+        "grupo": "Para os estudantes",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_60",
+        "texto": "Fui desobediente?",
+        "grupo": "Para os estudantes",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_61",
+        "texto": "Fui teimoso(a)?",
+        "grupo": "Para os estudantes",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_62",
+        "texto": "Tive indolência ou preguiça?",
+        "grupo": "Para os estudantes",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_63",
+        "texto": "Perdi tempo?",
+        "grupo": "Para os estudantes",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_64",
+        "texto": "Entreguei-me a distrações inúteis?",
+        "subtexto": "Festas e recreações indevidas, internet, televisão.",
+        "grupo": "Para os estudantes",
+        "grupoOpcional": true
+      },
+      {
+        "id": "m4_65",
+        "texto": "Desprezei as leis justas do Estado, do país bem como da Igreja?",
+        "grupo": "Para todos"
+      },
+      {
+        "id": "m4_66",
+        "texto": "Fui desobediente à autoridade legítima?",
+        "grupo": "Para todos"
+      },
+      {
+        "id": "m4_67",
+        "texto": "Desobedeci às leis civis?",
+        "grupo": "Para todos"
+      }
+    ]
+  },
+  {
+    "categoria": "V MANDAMENTO",
+    "titulo": "Não matarás",
+    "perguntas": [
+      {
+        "id": "m5_1",
+        "texto": "Causei morte ou lesão física a alguém por ação minha, participação, instigação, conselho, consentimento ou silêncio?"
+      },
+      {
+        "id": "m5_2",
+        "texto": "Tive a intenção de matar alguém?"
+      },
+      {
+        "id": "m5_3",
+        "texto": "Cometi assassinato?"
+      },
+      {
+        "id": "m5_4",
+        "texto": "Realizei um aborto?"
+      },
+      {
+        "id": "m5_5",
+        "texto": "Abortei ou ajudei alguém a procurar um aborto?"
+      },
+      {
+        "id": "m5_6",
+        "texto": "Pratiquei eutanásia?"
+      },
+      {
+        "id": "m5_7",
+        "texto": "Retirei os meios ordinários para um paciente terminal ou moribundo?"
+      },
+      {
+        "id": "m5_8",
+        "texto": "Tentei suicídio ou tive sérios pensamentos de cometê-lo?"
+      },
+      {
+        "id": "m5_9",
+        "texto": "Briguei fisicamente?"
+      },
+      {
+        "id": "m5_10",
+        "texto": "Participei de rixas?"
+      },
+      {
+        "id": "m5_11",
+        "texto": "Alimentei ódio?"
+      },
+      {
+        "id": "m5_12",
+        "texto": "Tive desejo de vingança?"
+      },
+      {
+        "id": "m5_13",
+        "texto": "Pratiquei tortura humana?"
+      },
+      {
+        "id": "m5_14",
+        "texto": "Pequei pela gula?",
+        "subtexto": "Bebi ou comi em excesso."
+      },
+      {
+        "id": "m5_15",
+        "texto": "Embriaguei-me?",
+        "subtexto": "Em que grau?"
+      },
+      {
+        "id": "m5_16",
+        "texto": "Abusei de álcool, medicamentos ou drogas?"
+      },
+      {
+        "id": "m5_17",
+        "texto": "Coloquei em perigo a vida de outros?",
+        "subtexto": "Como beber e dirigir, dirigir muito rápido, etc."
+      },
+      {
+        "id": "m5_18",
+        "texto": "Coloquei em risco minha própria vida ou membro do corpo sem uma razão suficiente?"
+      },
+      {
+        "id": "m5_19",
+        "texto": "Fui descuidado(a) ao deixar expostos venenos, drogas perigosas, armas, etc.?"
+      },
+      {
+        "id": "m5_20",
+        "texto": "Mutilei meu corpo?",
+        "subtexto": "Como castração."
+      },
+      {
+        "id": "m5_21",
+        "texto": "Fiz vasectomia, ligadura ou outro procedimento para evitar filhos?",
+        "subtexto": "Mesmo diante de prática generalizada."
+      },
+      {
+        "id": "m5_22",
+        "texto": "Fiz histerectomia?",
+        "subtexto": "Sem causa médica suficiente."
+      },
+      {
+        "id": "m5_23",
+        "texto": "Recorri a inseminação artificial, fertilização in vitro ou algo semelhante?"
+      },
+      {
+        "id": "m5_24",
+        "texto": "Participei ou apoiei pesquisas científicas imorais e suas aplicações?"
+      },
+      {
+        "id": "m5_25",
+        "texto": "Dei mau exemplo ou escândalo, levando outros a pecar?"
+      },
+      {
+        "id": "m5_26",
+        "texto": "Fui desrespeitoso(a) com moribundos ou mortos?"
+      },
+      {
+        "id": "m5_27",
+        "texto": "Não tentei evitar a guerra?"
+      },
+      {
+        "id": "m5_28",
+        "texto": "Mostrei aversão ou desprezo pelos outros?"
+      },
+      {
+        "id": "m5_29",
+        "texto": "Recusei-me a falar com outros quando fui cumprimentado?"
+      },
+      {
+        "id": "m5_30",
+        "texto": "Ignorei ofertas de reconciliação, especialmente entre parentes?"
+      },
+      {
+        "id": "m5_31",
+        "texto": "Fomentei um espírito que não perdoa o próximo?"
+      },
+      {
+        "id": "m5_32",
+        "texto": "Fiz zombaria e escárnio?"
+      },
+      {
+        "id": "m5_33",
+        "texto": "Proferi insultos?"
+      },
+      {
+        "id": "m5_34",
+        "texto": "Tive ações ou palavras irritantes?"
+      },
+      {
+        "id": "m5_35",
+        "texto": "Entristeci-me pela prosperidade alheia?"
+      },
+      {
+        "id": "m5_36",
+        "texto": "Alegrei-me pela miséria alheia?"
+      },
+      {
+        "id": "m5_37",
+        "texto": "Tive inveja pela atenção dada aos outros?"
+      },
+      {
+        "id": "m5_38",
+        "texto": "Tive comportamento tirânico?"
+      },
+      {
+        "id": "m5_39",
+        "texto": "Induzi os outros ao pecado pela palavra ou pelo exemplo?"
+      },
+      {
+        "id": "m5_40",
+        "texto": "Prejudiquei minha saúde pelo excesso de indulgência?"
+      },
+      {
+        "id": "m5_41",
+        "texto": "Dei álcool aos outros sabendo que iriam abusar dele?"
+      },
+      {
+        "id": "m5_42",
+        "texto": "Viciei-me em jogos de azar?",
+        "subtexto": "Colocando em perigo o sustento próprio ou da família."
+      },
+      {
+        "id": "m5_43",
+        "texto": "Tomei contraceptivos que podem ou não ser abortivos?",
+        "subtexto": "Pílulas e outros."
+      },
+      {
+        "id": "m5_44",
+        "texto": "Usei métodos profiláticos ou de barreira para evitar a gravidez?"
+      },
+      {
+        "id": "m5_45",
+        "texto": "Utilizei métodos naturais para evitar filhos possuindo uma mentalidade contraceptiva?"
+      },
+      {
+        "id": "m5_46",
+        "texto": "Realizei esterilização direta?"
+      },
+      {
+        "id": "m5_47",
+        "texto": "Causei morte ou sofrimento desnecessário aos animais?"
+      }
+    ]
+  },
+  {
+    "categoria": "VI MANDAMENTO",
+    "titulo": "Não cometerás adultério",
+    "notas": [
+      "É necessário mencionar as circunstâncias que mudam a natureza do pecado: o sexo da outra pessoa, o parentesco, o estado próprio e do outro de casado, solteiro ou vinculado a um voto."
+    ],
+    "perguntas": [
+      {
+        "id": "m6_1",
+        "texto": "Cometi impureza e imodéstia nas palavras, nos olhares e nas ações, seja sozinho ou com outros?"
+      },
+      {
+        "id": "m6_2",
+        "texto": "Contei ou ouvi piadas sujas; falei ou ouvi com consentimento coisas indecentes ou de duplo sentido?"
+      },
+      {
+        "id": "m6_3",
+        "texto": "Vangloriei-me da própria imoralidade?"
+      },
+      {
+        "id": "m6_4",
+        "texto": "Utilizei roupas imodestas?",
+        "subtexto": "Minissaias, calças apertadas, decotes arrojados, roupas transparentes, etc."
+      },
+      {
+        "id": "m6_5",
+        "texto": "Comprei, aluguei ou assisti filmes/programas indecentes, ou li revistas e livros com impurezas?"
+      },
+      {
+        "id": "m6_6",
+        "texto": "Expus-me voluntariamente a ocasiões de pecado por curiosidade, companhia perigosa, lugares ou diversões pecaminosas?",
+        "subtexto": "Como danças e jogos indecentes."
+      },
+      {
+        "id": "m6_7",
+        "texto": "Mantive companhia pecaminosa ou morei com alguém que não é meu cônjuge?"
+      },
+      {
+        "id": "m6_8",
+        "texto": "Fui tentação nessa matéria para os outros pelo meu modo de falar, agir, vestir ou por me insinuar?"
+      },
+      {
+        "id": "m6_9",
+        "texto": "Ouvi música cuja letra é indecente ou cujo ritmo favorece a sensualidade?"
+      },
+      {
+        "id": "m6_10",
+        "texto": "Pratiquei masturbação?",
+        "subtexto": "É habitual?"
+      },
+      {
+        "id": "m6_11",
+        "texto": "Pratiquei fornicação?",
+        "subtexto": "Sexo antes do casamento."
+      },
+      {
+        "id": "m6_12",
+        "texto": "Envolvi-me com prostituição?"
+      },
+      {
+        "id": "m6_13",
+        "texto": "Pratiquei sodomia?",
+        "subtexto": "Práticas homossexuais."
+      },
+      {
+        "id": "m6_14",
+        "texto": "Tive outras práticas contrárias à natureza?"
+      },
+      {
+        "id": "m6_15",
+        "texto": "Cometi adultério?",
+        "subtexto": "Também em pensamentos."
+      },
+      {
+        "id": "m6_16",
+        "texto": "Divorciei-me?"
+      },
+      {
+        "id": "m6_17",
+        "texto": "Pratiquei poligamia?"
+      },
+      {
+        "id": "m6_18",
+        "texto": "Pratiquei incesto?"
+      },
+      {
+        "id": "m6_19",
+        "texto": "Cometi abuso sexual?"
+      },
+      {
+        "id": "m6_20",
+        "texto": "Cometi estupro?"
+      },
+      {
+        "id": "m6_21",
+        "texto": "Dei beijo sensual, prolongado?"
+      },
+      {
+        "id": "m6_22",
+        "texto": "Troquei carícias ou preliminares fora do contexto do matrimônio, ou sem estarem ordenadas à consumação do ato conjugal natural?"
+      },
+      {
+        "id": "m6_23",
+        "texto": "Realizei o ato conjugal de modo inapto à procriação?"
+      },
+      {
+        "id": "m6_24",
+        "texto": "Neguei o débito conjugal sem razão realmente legítima para tanto?"
+      },
+      {
+        "id": "m6_25",
+        "texto": "Participei de danças imodestas?"
+      },
+      {
+        "id": "m6_26",
+        "texto": "Namorei sem tomar as devidas precauções para guardar a pureza e a fé?"
+      },
+      {
+        "id": "m6_27",
+        "texto": "Namorei quando não deveria, sem maturidade suficiente ou sem intenção de me casar?"
+      }
+    ]
+  },
+  {
+    "categoria": "VII MANDAMENTO",
+    "titulo": "Não roubarás",
+    "notas": [
+      "Quanto aos pecados contra a justiça, avalie o valor do que foi furtado/roubado ou o dano causado para julgamento da gravidade. Sem a restituição ou o firme propósito de fazê-la, o pecado não será perdoado.",
+      "Lembre-se: Examine se você reparou toda a injustiça feita. A restituição deve ser feita ao dono, ou dada aos pobres/Igreja caso ele não seja achado."
+    ],
+    "perguntas": [
+      {
+        "id": "m7_1",
+        "texto": "Roubei algo?",
+        "subtexto": "Qual o valor/quantidade?"
+      },
+      {
+        "id": "m7_2",
+        "texto": "Cometi pequenos furtos?",
+        "subtexto": "Tomar coisas do trabalho ou dinheiro da família sem permissão."
+      },
+      {
+        "id": "m7_3",
+        "texto": "Trapaceei?"
+      },
+      {
+        "id": "m7_4",
+        "texto": "Cometi plágio?"
+      },
+      {
+        "id": "m7_5",
+        "texto": "Quebrei regulamentação de direitos autorais?",
+        "subtexto": "Ex: fotocopiar sem autorização ou com fins comerciais."
+      },
+      {
+        "id": "m7_6",
+        "texto": "Mantive comigo objetos emprestados ou perdidos sem tentar devolvê-los ao dono?"
+      },
+      {
+        "id": "m7_7",
+        "texto": "Possuí bens ilícitos?"
+      },
+      {
+        "id": "m7_8",
+        "texto": "Aconselhei ou pedi a alguém que prejudicasse outra pessoa ou danificasse seus bens?"
+      },
+      {
+        "id": "m7_9",
+        "texto": "Danifiquei por descuido ou malícia a propriedade alheia?"
+      },
+      {
+        "id": "m7_10",
+        "texto": "Ocultei fraude, roubo ou dano quando tinha o dever de dar a informação?"
+      },
+      {
+        "id": "m7_11",
+        "texto": "Soneguei impostos justos?"
+      },
+      {
+        "id": "m7_12",
+        "texto": "Cometi fraude comercial?"
+      },
+      {
+        "id": "m7_13",
+        "texto": "Fui desonesto(a) na política, nos negócios, etc.?"
+      },
+      {
+        "id": "m7_14",
+        "texto": "Deixei de pagar dívidas justas no tempo correto e sem fazer esforços ou sacrifícios necessários para quitá-las?"
+      },
+      {
+        "id": "m7_15",
+        "texto": "Deixei de fazer a reparação/compensação a alguém que sofreu por meus danos injustos?"
+      },
+      {
+        "id": "m7_16",
+        "texto": "Aumentei preços tirando proveito da ignorância ou necessidade alheia?"
+      },
+      {
+        "id": "m7_17",
+        "texto": "Pratiquei usura?",
+        "subtexto": "Emprestar dinheiro a altos juros a alguém em dificuldade financeira."
+      },
+      {
+        "id": "m7_18",
+        "texto": "Fiz especulação planejando manipular artificialmente o preço dos bens para levar vantagem?"
+      },
+      {
+        "id": "m7_19",
+        "texto": "Pratiquei corrupção influenciando julgamentos legais?"
+      },
+      {
+        "id": "m7_20",
+        "texto": "Aceitei ou ofereci suborno?"
+      },
+      {
+        "id": "m7_21",
+        "texto": "Apropriei-me de bens comuns de uma empresa para propósitos privados?"
+      },
+      {
+        "id": "m7_22",
+        "texto": "Entreguei trabalho mal feito?"
+      },
+      {
+        "id": "m7_23",
+        "texto": "Paguei salários injustos ou neguei aos meus empregados os benefícios devidos?"
+      },
+      {
+        "id": "m7_24",
+        "texto": "Falsifiquei cheques ou faturas?"
+      },
+      {
+        "id": "m7_25",
+        "texto": "Emiti cheques sabendo que não havia fundo suficiente?"
+      },
+      {
+        "id": "m7_26",
+        "texto": "Tive despesas e gastos excessivos?"
+      },
+      {
+        "id": "m7_27",
+        "texto": "Deixei de manter promessas ou acordos contratuais moralmente justos?"
+      },
+      {
+        "id": "m7_28",
+        "texto": "Joguei ou apostei, privando a mim mesmo(a) ou aos outros dos meios necessários de vida?"
+      },
+      {
+        "id": "m7_29",
+        "texto": "Tive gasto excessivo ou desnecessário de bens, recursos ou dinheiro?"
+      }
+    ]
+  },
+  {
+    "categoria": "VIII MANDAMENTO",
+    "titulo": "Não darás falso testemunho contra o teu próximo",
+    "perguntas": [
+      {
+        "id": "m8_1",
+        "texto": "Menti?",
+        "subtexto": "Essa mentira chegou a prejudicar alguém gravemente ou não?"
+      },
+      {
+        "id": "m8_2",
+        "texto": "Disse palavrões ou grosserias?"
+      },
+      {
+        "id": "m8_3",
+        "texto": "Vangloriei-me?"
+      },
+      {
+        "id": "m8_4",
+        "texto": "Fiz falsas lisonjas?",
+        "subtexto": "Bazófia."
+      },
+      {
+        "id": "m8_5",
+        "texto": "Fui hipócrita?"
+      },
+      {
+        "id": "m8_6",
+        "texto": "Fui exagerado(a) no que falei?"
+      },
+      {
+        "id": "m8_7",
+        "texto": "Usei de ironia?"
+      },
+      {
+        "id": "m8_8",
+        "texto": "Fui sarcástico(a)?"
+      },
+      {
+        "id": "m8_9",
+        "texto": "Causei dano injusto ao nome alheio revelando faltas verdadeiras escondidas?",
+        "subtexto": "Detração."
+      },
+      {
+        "id": "m8_10",
+        "texto": "Causei dano revelando falsos defeitos?",
+        "subtexto": "Calúnia ou difamação."
+      },
+      {
+        "id": "m8_11",
+        "texto": "Espalhei rumores ou contei histórias difamatórias?"
+      },
+      {
+        "id": "m8_12",
+        "texto": "Critiquei os outros ou escutei com prazer outros sendo criticados?"
+      },
+      {
+        "id": "m8_13",
+        "texto": "Fiz fofocas?"
+      },
+      {
+        "id": "m8_14",
+        "texto": "Desonrei injustamente outra pessoa em sua presença?",
+        "subtexto": "Injúria."
+      },
+      {
+        "id": "m8_15",
+        "texto": "Fiz julgamentos precipitados?",
+        "subtexto": "Acreditar sem razão suficiente em um defeito moral de alguém."
+      },
+      {
+        "id": "m8_16",
+        "texto": "Revelei segredos?"
+      },
+      {
+        "id": "m8_17",
+        "texto": "Publiquei, sem causa grave, segredos que causam descrédito aos outros, mesmo sendo verdades?"
+      },
+      {
+        "id": "m8_18",
+        "texto": "Recusei ou demorei em restituir o bom nome que manchei injustamente?"
+      },
+      {
+        "id": "m8_19",
+        "texto": "Fiz acusações sem fundamento?"
+      },
+      {
+        "id": "m8_20",
+        "texto": "Levantei suspeitas infundadas?"
+      },
+      {
+        "id": "m8_21",
+        "texto": "Fiz julgamentos precipitados sobre os outros apenas em minha mente?"
+      }
+    ]
+  },
+  {
+    "categoria": "IX MANDAMENTO",
+    "titulo": "Não cobiçarás a mulher do próximo",
+    "notas": [
+      "O nono mandamento proíbe pensamentos e desejos impuros deliberados."
+    ],
+    "perguntas": [
+      {
+        "id": "m9_1",
+        "texto": "Comprazi-me deliberadamente em pensamentos ou desejos impuros?"
+      },
+      {
+        "id": "m9_2",
+        "texto": "Consenti de bom grado em paixões impuras que vieram à minha mente?"
+      }
+    ]
+  },
+  {
+    "categoria": "X MANDAMENTO",
+    "titulo": "Não cobiçarás os bens de teu próximo",
+    "perguntas": [
+      {
+        "id": "m10_1",
+        "texto": "Senti inveja?",
+        "subtexto": "Desejei os bens de outrem."
+      },
+      {
+        "id": "m10_2",
+        "texto": "Senti ciúmes?",
+        "subtexto": "Zelo desordenado para manter um bem longe dos outros."
+      },
+      {
+        "id": "m10_3",
+        "texto": "Tive ganância ou desejo sem limites de ter bens materiais?",
+        "subtexto": "Avareza."
+      },
+      {
+        "id": "m10_4",
+        "texto": "Desejei enriquecer a qualquer preço?"
+      },
+      {
+        "id": "m10_5",
+        "texto": "Envolvi-me em negócios que esperam circunstâncias desfavoráveis aos outros para obter lucro pessoal?"
+      },
+      {
+        "id": "m10_6",
+        "texto": "Tive inveja dos sucessos, talentos, bens espirituais ou temporais alheios?"
+      },
+      {
+        "id": "m10_7",
+        "texto": "Desejei cometer injustiça prejudicando alguém para obter seus bens temporais?"
+      },
+      {
+        "id": "m10_8",
+        "texto": "Alegrei-me ou consenti nos pecados contra o sétimo mandamento?"
+      }
+    ]
+  },
+  {
+    "categoria": "PRECEITOS DA IGREJA",
+    "titulo": "Os preceitos da Santa Igreja",
+    "notas": [
+      "Além dos Dez Mandamentos, os fiéis são obrigados a seguir os Preceitos da Igreja (Assistir à Missa nos Domingos/Dias de Guarda, Jejuar e Abster-se de carne, Confessar-se anualmente, Comungar na Páscoa, Contribuir para o sustento da Igreja). Em relação às leis do matrimônio no Sexto Preceito:"
+    ],
+    "perguntas": [
+      {
+        "id": "prec_1",
+        "texto": "Casei-me (ou ajudei alguém a se casar) sem a permissão da Igreja, diante do Estado ou de ministro acatólico?"
+      },
+      {
+        "id": "prec_2",
+        "texto": "Casei-me sem a dispensa necessária para graus de parentesco proibidos ou outro impedimento?"
+      },
+      {
+        "id": "prec_3",
+        "texto": "Separei-me sem causa justa?"
+      },
+      {
+        "id": "prec_4",
+        "texto": "Separei-me e juntei-me com outra pessoa, em segunda união?"
+      }
+    ]
+  }
+]
