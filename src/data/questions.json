@@ -26,12 +26,14 @@
       {
         "id": "ant_4",
         "texto": "Você deliberadamente ocultou um pecado mortal, ou confessou sem arrependimento verdadeiro, ou sem um firme propósito de correção, ou sem a intenção de cumprir sua penitência?",
-        "textoResumo": "Ocultei deliberadamente um pecado mortal, ou confessei sem arrependimento verdadeiro, ou sem um firme propósito de correção, ou sem a intenção de cumprir a penitência."
+        "textoResumo": "Ocultei deliberadamente um pecado mortal, ou confessei sem arrependimento verdadeiro, ou sem um firme propósito de correção, ou sem a intenção de cumprir a penitência.",
+        "semFrequencia": true
       },
       {
         "id": "ant_5",
         "texto": "Você, após essa má confissão, recebeu a Santa Comunhão em estado de pecado mortal?",
-        "textoResumo": "Após essa má confissão, recebi a Santa Comunhão em estado de pecado mortal."
+        "textoResumo": "Após essa má confissão, recebi a Santa Comunhão em estado de pecado mortal.",
+        "semFrequencia": true
       },
       {
         "id": "ant_6",

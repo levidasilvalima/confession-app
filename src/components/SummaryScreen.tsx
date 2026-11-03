@@ -1,5 +1,6 @@
 import type { EstadoConfissao, Pergunta } from '../types';
 import { categorias, deveMostrar, indicaFalta, oracoes } from '../data';
+import { descreverFrequencia } from '../data/frequencia';
 import { Cruz } from './Cruz';
 
 interface Props {
@@ -75,6 +76,11 @@ export function SummaryScreen({ estado, onRevisar, onApagar }: Props) {
                     ) : (
                       <div>
                         <p className="text-xl leading-snug text-stone-900">{pergunta.textoResumo ?? pergunta.texto}</p>
+                        {estado.frequencias[pergunta.id] && (
+                          <p className="mt-1 text-lg font-semibold text-liturgico-900">
+                            {descreverFrequencia(estado.frequencias[pergunta.id])}
+                          </p>
+                        )}
                         {pergunta.subtexto && !pergunta.textoResumo && (
                           <p className="mt-1 text-base text-stone-500">{pergunta.subtexto}</p>
                         )}

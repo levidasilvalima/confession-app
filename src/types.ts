@@ -1,5 +1,13 @@
 export type Resposta = 'sim' | 'nao';
 
+export type UnidadeTempo = 'dia' | 'semana' | 'mes' | 'ano';
+
+/** Quantas vezes (ou com que frequência e por quanto tempo) um pecado foi cometido. */
+export type Frequencia =
+  | { modo: 'vezes'; vezes: number; aprox: boolean }
+  | { modo: 'periodo'; vezes: number; por: UnidadeTempo; duracao: number; unidade: UnidadeTempo }
+  | { modo: 'naosei' };
+
 export interface Pergunta {
   id: string;
   texto: string;
@@ -20,6 +28,8 @@ export interface Pergunta {
   placeholder?: string;
   /** Só pergunta se ALGUMA das perguntas indicadas foi respondida indicando falta. */
   mostrarSe?: string[];
+  /** Não perguntar "quantas vezes?" (ex.: o número já é pedido em outra pergunta). */
+  semFrequencia?: boolean;
 }
 
 export interface Categoria {
@@ -50,6 +60,7 @@ export interface EstadoConfissao {
   historico: number[];
   respostas: Record<string, Resposta>;
   textos: Record<string, string>;
+  frequencias: Record<string, Frequencia>;
 }
 
 export interface Oracao {

@@ -284,9 +284,13 @@ const AJUSTES_ANTES = [
   {
     textoResumo:
       'Ocultei deliberadamente um pecado mortal, ou confessei sem arrependimento verdadeiro, ou sem um firme propósito de correção, ou sem a intenção de cumprir a penitência.',
+    // O número é pedido logo depois, em ant_6.
+    semFrequencia: true,
   },
   {
     textoResumo: 'Após essa má confissão, recebi a Santa Comunhão em estado de pecado mortal.',
+    // O número é pedido logo depois, em ant_6.
+    semFrequencia: true,
   },
   {
     rotuloResumo: 'Número de Confissões e Comunhões sacrílegas',

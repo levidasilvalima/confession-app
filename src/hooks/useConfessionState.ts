@@ -1,6 +1,7 @@
 import { useCallback, useEffect, useState } from 'react';
-import type { EstadoConfissao, Resposta } from '../types';
+import type { EstadoConfissao, Frequencia, Resposta } from '../types';
 import { TOTAL_PERGUNTAS, fimDoGrupo, perguntasPlanas, proximoVisivel } from '../data';
+import { validarFrequencia } from '../data/frequencia';
 
 /**
  * Chave usada no localStorage. Os dados ficam SOMENTE neste aparelho
@@ -14,6 +15,7 @@ const ESTADO_INICIAL: EstadoConfissao = {
   historico: [],
   respostas: {},
   textos: {},
+  frequencias: {},
 };
 
 function carregar(): EstadoConfissao {
@@ -32,10 +34,21 @@ function carregar(): EstadoConfissao {
         : [],
       respostas: salvo.respostas && typeof salvo.respostas === 'object' ? salvo.respostas : {},
       textos: salvo.textos && typeof salvo.textos === 'object' ? salvo.textos : {},
+      frequencias: carregarFrequencias(salvo.frequencias),
     };
   } catch {
     return ESTADO_INICIAL;
   }
+}
+
+function carregarFrequencias(bruto: unknown): Record<string, Frequencia> {
+  if (!bruto || typeof bruto !== 'object') return {};
+  const frequencias: Record<string, Frequencia> = {};
+  for (const [id, valor] of Object.entries(bruto)) {
+    const f = validarFrequencia(valor);
+    if (f) frequencias[id] = f;
+  }
+  return frequencias;
 }
 
 /** Avança para `proximo` (ou para o resumo, se acabaram as perguntas). */
@@ -64,11 +77,14 @@ export function useConfessionState() {
     setEstado((e) => ({ ...e, tela: 'exame', indice: proximoVisivel(e.indice, e) }));
   }, []);
 
-  const responder = useCallback((resposta: Resposta) => {
+  const responder = useCallback((resposta: Resposta, frequencia?: Frequencia) => {
     setEstado((e) => {
       const { pergunta } = perguntasPlanas[e.indice];
       const respostas = { ...e.respostas, [pergunta.id]: resposta };
-      const novo = { ...e, respostas };
+      const frequencias = { ...e.frequencias };
+      if (frequencia) frequencias[pergunta.id] = frequencia;
+      else delete frequencias[pergunta.id];
+      const novo = { ...e, respostas, frequencias };
       return avancar(novo, proximoVisivel(e.indice + 1, novo));
     });
   }, []);
