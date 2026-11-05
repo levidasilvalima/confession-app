@@ -273,12 +273,12 @@ const AJUSTES_ANTES = [
   },
   {
     subtexto: 'Na última confissão.',
-    pecadoSe: 'nao',
+    pecadoSe: 'NAO',
     textoResumo: 'Não recebi a absolvição na última confissão.',
   },
   {
     subtexto: 'A penitência da última confissão.',
-    pecadoSe: 'nao',
+    pecadoSe: 'NAO',
     textoResumo: 'Não cumpri a penitência da última confissão.',
   },
   {
@@ -298,9 +298,95 @@ const AJUSTES_ANTES = [
   },
 ];
 
+// ---------------------------------------------------------------------------
+// 5. Preceitos da Igreja
+// ---------------------------------------------------------------------------
+// O PDF de origem só tem perguntas sobre o sexto preceito. Estas vêm da explicação
+// dos preceitos 1 a 5 no "Exame de Consciência para Adultos" do Pe. Daniel. Os ids
+// têm prefixo próprio para não mudar os de prec_1 a prec_4.
+const NOTA_PRECEITOS =
+  'Além dos Dez Mandamentos da Lei de Deus, os fiéis são também obrigados a seguir os Preceitos da Igreja.';
+const GRUPO_SEXTO_PRECEITO = '6º preceito: leis da Igreja sobre o matrimônio';
+const PERGUNTAS_PRECEITOS = [
+  {
+    grupo: '1º preceito: Missa aos Domingos e Dias Santos de Guarda',
+    perguntas: [
+      {
+        id: 'prec1_1',
+        texto: 'Deixei de assistir à Missa em Domingo ou Dia Santo de Guarda sem causa grave?',
+        subtexto:
+          'No Brasil, ficam na própria data: Natal (25/12), Circuncisão do Senhor (1/1), Corpus Christi e Imaculada Conceição (8/12). Os demais passam para o Domingo seguinte.',
+      },
+      { id: 'prec1_2', texto: 'Cheguei atrasado(a) à Missa sem razão suficiente?' },
+      {
+        id: 'prec1_3',
+        texto: 'Fiz trabalho servil desnecessário em Dia Santo de Guarda?',
+        subtexto: 'Na medida do possível, a Igreja pede que nos abstenhamos dele, como nos Domingos.',
+      },
+    ],
+  },
+  {
+    grupo: '2º preceito: jejum, abstinência e penitência',
+    perguntas: [
+      {
+        id: 'prec2_1',
+        texto: 'Deixei de jejuar na Quarta-feira de Cinzas ou na Sexta-feira Santa?',
+        subtexto:
+          'Obriga dos 18 anos até o início dos 60. Jejuar é fazer uma refeição completa e duas menores que, juntas, não passem de uma completa.',
+      },
+      {
+        id: 'prec2_2',
+        texto: 'Comi carne na Quarta-feira de Cinzas ou na Sexta-feira Santa?',
+        subtexto: 'A abstinência obriga a partir dos 14 anos completos.',
+      },
+      {
+        id: 'prec2_3',
+        texto: 'Comi carne em outras sextas-feiras do ano sem fazer outra penitência no lugar?',
+        subtexto:
+          'No Brasil, pode ser trocada por outra penitência, como rezar um terço, a Via Sacra ou visitar doentes ou presos.',
+      },
+    ],
+  },
+  {
+    grupo: '3º preceito: confissão ao menos uma vez por ano',
+    perguntas: [
+      {
+        id: 'prec3_1',
+        texto: 'Tendo pecado mortal, fiquei mais de um ano sem me confessar?',
+      },
+      {
+        id: 'prec3_2',
+        texto: 'Deixei de preparar meus filhos para a confissão?',
+        subtexto: 'Caso tenha filhos. Por volta dos sete anos, quando aprendem a distinguir o certo do errado.',
+      },
+    ],
+  },
+  {
+    grupo: '4º preceito: comunhão no período da Páscoa',
+    perguntas: [
+      {
+        id: 'prec4_1',
+        texto: 'Deixei de comungar no período da Páscoa?',
+        subtexto: 'Vai da Quinta-feira Santa até o primeiro Domingo depois de Pentecostes (Festa da Santíssima Trindade).',
+      },
+    ],
+  },
+  {
+    grupo: '5º preceito: sustento da Igreja e de seus ministros',
+    perguntas: [
+      {
+        id: 'prec5_1',
+        texto: 'Deixei de ajudar nas necessidades materiais da Igreja, conforme minhas possibilidades?',
+      },
+    ],
+  },
+];
+
 // Texto em 1ª pessoa, afirmativo, mostrado no resumo do confessionário no lugar
 // da pergunta (o penitente só lê o que já escolheu). Chave = id da pergunta.
 const RESUMOS = JSON.parse(readFileSync(resolve(__dirname, 'resumos.json'), 'utf8'));
+// Exemplo de agravante coerente com cada pecado, mostrado ao responder que há falta.
+const EXEMPLOS = JSON.parse(readFileSync(resolve(__dirname, 'exemplos.json'), 'utf8'));
 
 function finalizar(categorias) {
   const usados = new Set();
@@ -317,12 +403,26 @@ function finalizar(categorias) {
     if (prefixo === 'ant') {
       cat.perguntas.forEach((p, i) => Object.assign(p, AJUSTES_ANTES[i] ?? {}));
     }
+    if (prefixo === 'prec') {
+      cat.nota = NOTA_PRECEITOS;
+      cat.perguntas.forEach((p) => {
+        p.grupo = GRUPO_SEXTO_PRECEITO;
+      });
+      const novas = PERGUNTAS_PRECEITOS.flatMap(({ grupo, perguntas }) => perguntas.map((p) => ({ ...p, grupo })));
+      cat.perguntas.unshift(...novas);
+    }
     for (const p of cat.perguntas) {
       if (p.id in RESUMOS) {
         p.textoResumo = RESUMOS[p.id];
         usados.add(p.id);
       } else if (p.tipo !== 'texto' && !p.textoResumo) {
         console.warn(`AVISO: pergunta sem texto de resumo: ${p.id}`);
+      }
+      if (p.id in EXEMPLOS) {
+        p.exemploAgravante = EXEMPLOS[p.id];
+        usados.add(p.id);
+      } else if (p.tipo !== 'texto') {
+        console.warn(`AVISO: pergunta sem exemplo de agravante: ${p.id}`);
       }
     }
     if (cat.titulo) cat.titulo = tituloBonito(cat.titulo);
@@ -340,8 +440,8 @@ function finalizar(categorias) {
       })),
     };
   }
-  for (const id of Object.keys(RESUMOS)) {
-    if (!usados.has(id)) console.warn(`AVISO: resumo para id inexistente: ${id}`);
+  for (const id of [...Object.keys(RESUMOS), ...Object.keys(EXEMPLOS)]) {
+    if (!usados.has(id)) console.warn(`AVISO: texto para id inexistente: ${id}`);
   }
   return categorias;
 }

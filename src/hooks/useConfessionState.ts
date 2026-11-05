@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
-import type { EstadoConfissao, Resposta } from '../types';
-import { TOTAL_PERGUNTAS, fimDoGrupo, perguntasPlanas, proximoVisivel } from '../data';
+import type { EstadoConfissao, Resposta, RespostaPergunta } from '../types';
+import { TOTAL_PERGUNTAS, fimDoGrupo, indicaFalta, perguntasPlanas, proximoVisivel } from '../data';
 
 /**
  * Chave usada no localStorage. Os dados ficam SOMENTE neste aparelho
@@ -16,6 +16,19 @@ const ESTADO_INICIAL: EstadoConfissao = {
   textos: {},
 };
 
+/** Aceita o formato atual e o antigo (`{ m1_1: 'sim' }`), para não perder um exame em andamento. */
+function normalizarRespostas(salvas: unknown): Record<string, RespostaPergunta> {
+  if (!salvas || typeof salvas !== 'object') return {};
+  const respostas: Record<string, RespostaPergunta> = {};
+  for (const [id, valor] of Object.entries(salvas)) {
+    const objeto = valor && typeof valor === 'object' ? (valor as Partial<RespostaPergunta>) : undefined;
+    const bruta = String(objeto ? objeto.resposta : valor).toUpperCase();
+    if (bruta !== 'SIM' && bruta !== 'NAO') continue;
+    respostas[id] = { id, resposta: bruta, observacao: typeof objeto?.observacao === 'string' ? objeto.observacao : '' };
+  }
+  return respostas;
+}
+
 function carregar(): EstadoConfissao {
   try {
     const bruto = localStorage.getItem(CHAVE);
@@ -30,7 +43,7 @@ function carregar(): EstadoConfissao {
       historico: Array.isArray(salvo.historico)
         ? salvo.historico.filter((n) => typeof n === 'number' && n >= 0 && n < TOTAL_PERGUNTAS)
         : [],
-      respostas: salvo.respostas && typeof salvo.respostas === 'object' ? salvo.respostas : {},
+      respostas: normalizarRespostas(salvo.respostas),
       textos: salvo.textos && typeof salvo.textos === 'object' ? salvo.textos : {},
     };
   } catch {
@@ -64,13 +77,34 @@ export function useConfessionState() {
     setEstado((e) => ({ ...e, tela: 'exame', indice: proximoVisivel(e.indice, e) }));
   }, []);
 
+  /**
+   * Salva a resposta. Se ela indica falta, fica na pergunta para anotar frequência
+   * e agravantes; caso contrário, avança sozinho.
+   */
   const responder = useCallback((resposta: Resposta) => {
     setEstado((e) => {
       const { pergunta } = perguntasPlanas[e.indice];
-      const respostas = { ...e.respostas, [pergunta.id]: resposta };
+      const anterior = e.respostas[pergunta.id];
+      const observacao = anterior?.resposta === resposta ? anterior.observacao : '';
+      const respostas = { ...e.respostas, [pergunta.id]: { id: pergunta.id, resposta, observacao } };
       const novo = { ...e, respostas };
+      if (indicaFalta(pergunta, novo)) return novo;
       return avancar(novo, proximoVisivel(e.indice + 1, novo));
     });
+  }, []);
+
+  /** Salva a anotação a cada alteração, para não perdê-la se o app for fechado. */
+  const anotar = useCallback((observacao: string) => {
+    setEstado((e) => {
+      const { pergunta } = perguntasPlanas[e.indice];
+      const atual = e.respostas[pergunta.id];
+      if (!atual) return e;
+      return { ...e, respostas: { ...e.respostas, [pergunta.id]: { ...atual, observacao } } };
+    });
+  }, []);
+
+  const confirmarEAvancar = useCallback(() => {
+    setEstado((e) => avancar(e, proximoVisivel(e.indice + 1, e)));
   }, []);
 
   const responderTexto = useCallback((texto: string) => {
@@ -123,6 +157,8 @@ export function useConfessionState() {
     temProgresso,
     iniciar,
     responder,
+    anotar,
+    confirmarEAvancar,
     responderTexto,
     pularGrupo,
     voltar,

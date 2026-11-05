@@ -1,9 +1,11 @@
 import questionsJson from './questions.json';
 import prayersJson from './prayers.json';
-import type { Categoria, EstadoConfissao, Oracoes, Pergunta, PerguntaPlana } from '../types';
+import metodoJson from './metodo.json';
+import type { Categoria, EstadoConfissao, MetodoConfissao, Oracoes, Pergunta, PerguntaPlana } from '../types';
 
 export const categorias = questionsJson as Categoria[];
 export const oracoes = prayersJson as Oracoes;
+export const metodo = metodoJson as MetodoConfissao;
 
 /** Todas as perguntas em sequência, com o contexto da categoria. */
 export const perguntasPlanas: PerguntaPlana[] = categorias.flatMap((categoria, indiceCategoria) =>
@@ -20,8 +22,8 @@ export const TOTAL_PERGUNTAS = perguntasPlanas.length;
 
 /** A resposta dada indica uma falta a ser confessada? */
 export function indicaFalta(pergunta: Pergunta, estado: Pick<EstadoConfissao, 'respostas'>): boolean {
-  const resposta = estado.respostas[pergunta.id];
-  return resposta !== undefined && resposta === (pergunta.pecadoSe ?? 'sim');
+  const resposta = estado.respostas[pergunta.id]?.resposta;
+  return resposta !== undefined && resposta === (pergunta.pecadoSe ?? 'SIM');
 }
 
 /** A pergunta deve ser exibida, considerando as condições `mostrarSe`? */

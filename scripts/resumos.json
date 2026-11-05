@@ -62,7 +62,7 @@
   "m2_8": "Quebrei votos ou promessas feitas a Deus.",
   "m2_9": "Fui irreverente na Igreja (conversei, distraí os outros ou me vesti de forma inapropriada).",
 
-  "m3_1": "Faltei à Missa ou fiz algo que impediu a santificação do domingo.",
+  "m3_1": "Omiti a oração e o culto divino, ou fiz algo que impediu a santificação do domingo.",
   "m3_2": "Comprei ou vendi sem necessidade aos domingos e dias de guarda.",
   "m3_3": "Profanei o domingo e os dias de guarda com más companhias, diversões pecaminosas ou bebida em excesso.",
 
@@ -148,7 +148,7 @@
   "m5_12": "Tive desejo de vingança.",
   "m5_13": "Pratiquei tortura.",
   "m5_14": "Pequei pela gula (comi ou bebi em excesso).",
-  "m5_15": "Embriaguei-me (dizer em que grau).",
+  "m5_15": "Embriaguei-me.",
   "m5_16": "Abusei de álcool, remédios ou drogas.",
   "m5_17": "Coloquei em perigo a vida de outros (ex.: beber e dirigir, dirigir rápido demais).",
   "m5_18": "Coloquei em risco minha vida ou meu corpo sem razão suficiente.",
@@ -191,7 +191,7 @@
   "m6_7": "Mantive companhia pecaminosa ou morei com alguém que não é meu cônjuge.",
   "m6_8": "Fui tentação para os outros pelo meu modo de falar, agir ou vestir.",
   "m6_9": "Ouvi música indecente ou sensual.",
-  "m6_10": "Pratiquei masturbação (dizer se é habitual).",
+  "m6_10": "Pratiquei masturbação.",
   "m6_11": "Pratiquei fornicação (sexo antes do casamento).",
   "m6_12": "Envolvi-me com prostituição.",
   "m6_13": "Tive práticas homossexuais.",
@@ -210,7 +210,7 @@
   "m6_26": "Namorei sem os devidos cuidados para guardar a pureza e a fé.",
   "m6_27": "Namorei sem maturidade ou sem intenção de me casar.",
 
-  "m7_1": "Roubei (dizer o valor ou a quantidade).",
+  "m7_1": "Roubei.",
   "m7_2": "Cometi pequenos furtos (coisas do trabalho ou dinheiro da família sem permissão).",
   "m7_3": "Trapaceei.",
   "m7_4": "Cometi plágio.",
@@ -240,7 +240,7 @@
   "m7_28": "Joguei ou apostei, privando a mim ou a outros do necessário para viver.",
   "m7_29": "Desperdicei bens, recursos ou dinheiro.",
 
-  "m8_1": "Menti (dizer se a mentira prejudicou alguém gravemente).",
+  "m8_1": "Menti.",
   "m8_2": "Disse palavrões ou grosserias.",
   "m8_3": "Vangloriei-me.",
   "m8_4": "Fiz falsos elogios (bajulação).",
@@ -273,6 +273,17 @@
   "m10_6": "Tive inveja dos sucessos, talentos ou bens dos outros.",
   "m10_7": "Desejei prejudicar alguém para obter seus bens.",
   "m10_8": "Alegrei-me ou consenti em pecados contra o sétimo mandamento.",
+
+  "prec1_1": "Deixei de assistir à Missa em Domingo ou Dia Santo de Guarda sem causa grave.",
+  "prec1_2": "Cheguei atrasado(a) à Missa sem razão suficiente.",
+  "prec1_3": "Fiz trabalho servil desnecessário em Dia Santo de Guarda.",
+  "prec2_1": "Deixei de jejuar na Quarta-feira de Cinzas ou na Sexta-feira Santa.",
+  "prec2_2": "Comi carne na Quarta-feira de Cinzas ou na Sexta-feira Santa.",
+  "prec2_3": "Comi carne em outras sextas-feiras do ano sem fazer outra penitência no lugar.",
+  "prec3_1": "Tendo pecado mortal, fiquei mais de um ano sem me confessar.",
+  "prec3_2": "Deixei de preparar meus filhos para a confissão.",
+  "prec4_1": "Deixei de comungar no período da Páscoa.",
+  "prec5_1": "Deixei de ajudar nas necessidades materiais da Igreja, podendo fazê-lo.",
 
   "prec_1": "Casei-me (ou ajudei alguém a se casar) sem a permissão da Igreja, só no civil ou diante de ministro não católico.",
   "prec_2": "Casei-me sem a dispensa necessária por parentesco ou outro impedimento.",

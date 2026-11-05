@@ -44,6 +44,63 @@ body {
   padding-bottom: max(1rem, env(safe-area-inset-bottom));
 }
 
+/* Impressão / PDF do confessionário: só o roteiro, em preto no branco. */
+@media print {
+  @page {
+    margin: 15mm;
+  }
+
+  /* `!important` vence o desfoque inline do PrivacyBlur: abrir o diálogo de
+     impressão pode esconder a página, e o PDF não pode sair borrado. */
+  *,
+  *::before,
+  *::after {
+    background: transparent !important;
+    color: #000 !important;
+    box-shadow: none !important;
+    filter: none !important;
+    animation: none !important;
+    transition: none !important;
+    opacity: 1 !important;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+  }
+
+  /* As medidas do app são em rem: a fonte menor reduz tudo e economiza papel. */
+  html {
+    font-size: 13px;
+  }
+
+  .min-h-dvh {
+    min-height: 0 !important;
+  }
+
+  .pt-seguro,
+  .pb-seguro {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  .max-w-xl {
+    max-width: none !important;
+  }
+
+  /* Um pecado e sua anotação nunca se separam entre páginas. */
+  .impressao-inteiro {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  /* Título não fica sozinho no fim da página. */
+  .impressao-com-seguinte {
+    break-after: avoid;
+    page-break-after: avoid;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

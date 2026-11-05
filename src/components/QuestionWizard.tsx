@@ -1,11 +1,13 @@
-import { useEffect, useState, type FormEvent } from 'react';
+import { useEffect, useRef, useState, type FormEvent } from 'react';
 import type { EstadoConfissao, PerguntaPlana, Resposta } from '../types';
-import { TOTAL_PERGUNTAS } from '../data';
+import { TOTAL_PERGUNTAS, indicaFalta } from '../data';
 
 interface Props {
   estado: EstadoConfissao;
   item: PerguntaPlana;
   onResponder: (resposta: Resposta) => void;
+  onAnotar: (observacao: string) => void;
+  onConfirmar: () => void;
   onResponderTexto: (texto: string) => void;
   onVoltar: () => void;
   onPularGrupo: () => void;
@@ -15,11 +17,13 @@ interface Props {
 /** Tempo em que os botões ficam travados após trocar de pergunta (evita toque duplo). */
 const TRAVA_MS = 350;
 
-/** TELA 2 — Exame: uma pergunta por vez, com botões SIM / NÃO. */
+/** TELA 2 — Exame: uma pergunta por vez, com botões SIM / NÃO e anotação de agravantes. */
 export function QuestionWizard({
   estado,
   item,
   onResponder,
+  onAnotar,
+  onConfirmar,
   onResponderTexto,
   onVoltar,
   onPularGrupo,
@@ -29,13 +33,16 @@ export function QuestionWizard({
   const respostaAtual = estado.respostas[pergunta.id];
   const posicao = estado.indice + 1;
   const progresso = Math.round((posicao / TOTAL_PERGUNTAS) * 100);
+  const anotando = pergunta.tipo !== 'texto' && indicaFalta(pergunta, estado);
 
+  // O campo de anotação empurra os botões para cima: a trava também evita que
+  // um toque duplo na resposta caia no "Confirmar e Avançar".
   const [travado, setTravado] = useState(true);
   useEffect(() => {
     setTravado(true);
     const t = window.setTimeout(() => setTravado(false), TRAVA_MS);
     return () => window.clearTimeout(t);
-  }, [pergunta.id]);
+  }, [pergunta.id, anotando]);
 
   const terminar = () => {
     if (window.confirm('Ir para o resumo agora? As perguntas que faltam ficarão sem resposta.')) onTerminar();
@@ -132,21 +139,33 @@ export function QuestionWizard({
           onEnviar={onResponderTexto}
         />
       ) : (
-        <footer className="grid grid-cols-2 gap-4">
-          <BotaoResposta
-            rotulo="SIM"
-            selecionado={respostaAtual === 'sim'}
-            disabled={travado}
-            onClick={() => onResponder('sim')}
-            className="bg-liturgico-800 text-white active:bg-liturgico-900"
-          />
-          <BotaoResposta
-            rotulo="NÃO"
-            selecionado={respostaAtual === 'nao'}
-            disabled={travado}
-            onClick={() => onResponder('nao')}
-            className="bg-white text-liturgico-900 ring-2 ring-liturgico-800 active:bg-liturgico-50"
-          />
+        <footer>
+          <div className="grid grid-cols-2 gap-4">
+            <BotaoResposta
+              rotulo="SIM"
+              selecionado={respostaAtual?.resposta === 'SIM'}
+              disabled={travado}
+              onClick={() => onResponder('SIM')}
+              className="bg-liturgico-800 text-white active:bg-liturgico-900"
+            />
+            <BotaoResposta
+              rotulo="NÃO"
+              selecionado={respostaAtual?.resposta === 'NAO'}
+              disabled={travado}
+              onClick={() => onResponder('NAO')}
+              className="bg-white text-liturgico-900 ring-2 ring-liturgico-800 active:bg-liturgico-50"
+            />
+          </div>
+          {anotando && (
+            <Anotacao
+              key={`anotacao-${pergunta.id}`}
+              valor={respostaAtual?.observacao ?? ''}
+              exemplo={pergunta.exemploAgravante}
+              travado={travado}
+              onAlterar={onAnotar}
+              onConfirmar={onConfirmar}
+            />
+          )}
         </footer>
       )}
     </div>
@@ -179,6 +198,60 @@ function BotaoResposta({
       {rotulo}
       {selecionado && <span className="sr-only"> (resposta anterior)</span>}
     </button>
+  );
+}
+
+/** Campo revelado ao responder que há falta: frequência e agravantes (opcional). */
+function Anotacao({
+  valor,
+  exemplo,
+  travado,
+  onAlterar,
+  onConfirmar,
+}: {
+  valor: string;
+  exemplo?: string;
+  travado: boolean;
+  onAlterar: (observacao: string) => void;
+  onConfirmar: () => void;
+}) {
+  const bloco = useRef<HTMLDivElement>(null);
+
+  // Em telas pequenas o campo nasce abaixo da dobra: traz o botão de avançar para a vista.
+  useEffect(() => {
+    bloco.current?.scrollIntoView({ block: 'end', behavior: 'smooth' });
+  }, []);
+
+  return (
+    <div ref={bloco} className="mt-5 flex animate-entrada flex-col gap-3 pb-1">
+      <label htmlFor="observacao" className="text-lg font-semibold text-stone-900">
+        Quantas vezes? Tem algum agravante?
+      </label>
+      {exemplo && (
+        <p id="observacao-exemplo" className="-mt-2 text-base leading-snug text-stone-600">
+          Ex.: {exemplo}.
+        </p>
+      )}
+      <textarea
+        id="observacao"
+        rows={3}
+        value={valor}
+        onChange={(e) => onAlterar(e.target.value)}
+        aria-describedby={exemplo ? 'observacao-exemplo' : undefined}
+        autoComplete="off"
+        autoCorrect="off"
+        spellCheck={false}
+        className="w-full rounded-2xl border-2 border-stone-300 bg-white px-4 py-3 text-lg focus:border-liturgico-700 focus:outline-none"
+      />
+      <button
+        type="button"
+        onClick={onConfirmar}
+        disabled={travado}
+        className="min-h-16 rounded-2xl bg-liturgico-800 text-2xl font-bold text-white shadow-md transition active:scale-[0.98] active:bg-liturgico-900"
+      >
+        Confirmar e Avançar
+      </button>
+    </div>
   );
 }
 

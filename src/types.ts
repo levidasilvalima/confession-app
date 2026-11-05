@@ -1,4 +1,11 @@
-export type Resposta = 'sim' | 'nao';
+export type Resposta = 'SIM' | 'NAO';
+
+/** Resposta salva: além do SIM/NÃO, guarda a anotação de frequência e agravantes. */
+export interface RespostaPergunta {
+  id: string;
+  resposta: Resposta;
+  observacao: string;
+}
 
 export interface Pergunta {
   id: string;
@@ -11,8 +18,10 @@ export interface Pergunta {
   grupo?: string;
   /** O grupo só se aplica a algumas pessoas e pode ser pulado inteiro. */
   grupoOpcional?: boolean;
-  /** Qual resposta indica falta a confessar. Padrão: "sim". */
+  /** Qual resposta indica falta a confessar. Padrão: "SIM". */
   pecadoSe?: Resposta;
+  /** Exemplo de agravante coerente com o pecado, exibido junto ao campo de observação. */
+  exemploAgravante?: string;
   /** Texto (em 1ª pessoa) usado no resumo do confessionário. */
   textoResumo?: string;
   /** Rótulo usado no resumo para perguntas do tipo "texto". */
@@ -48,7 +57,7 @@ export interface EstadoConfissao {
   indice: number;
   /** Pilha de índices visitados, para o botão "Voltar". */
   historico: number[];
-  respostas: Record<string, Resposta>;
+  respostas: Record<string, RespostaPergunta>;
   textos: Record<string, string>;
 }
 
@@ -62,4 +71,28 @@ export interface Oracoes {
   introducao: string[];
   oracaoAntes: Oracao;
   oracaoDepois: Oracao;
+}
+
+export interface FalaMetodo {
+  quem: 'Penitente' | 'Sacerdote';
+  texto: string;
+  lingua?: string;
+}
+
+/** Roteiro lido no confessionário (apêndice do exame do Pe. Daniel). */
+export interface MetodoConfissao {
+  titulo: string;
+  dialogoInicial: FalaMetodo[];
+  confiteor: string[];
+  ultimaConfissao: string;
+  ultimaConfissaoNota: string;
+  acusacaoNota: string;
+  encerramento: string;
+  praticaNota: string;
+  atoContricao: string[];
+  absolvicaoNota: string;
+  absolvicaoLatim: string[];
+  absolvicaoPortugues: string[];
+  despedida: string;
+  fonte: string;
 }

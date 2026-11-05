@@ -12,6 +12,8 @@ export default function App() {
     temProgresso,
     iniciar,
     responder,
+    anotar,
+    confirmarEAvancar,
     responderTexto,
     pularGrupo,
     voltar,
@@ -20,10 +22,10 @@ export default function App() {
     apagarTudo,
   } = useConfessionState();
 
-  // Sempre começa cada tela do topo.
+  // Sempre começa cada tela e cada pergunta do topo (o campo de anotação pode ter rolado a página).
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [estado.tela]);
+  }, [estado.tela, estado.indice]);
 
   return (
     <PrivacyBlur>
@@ -34,6 +36,8 @@ export default function App() {
           estado={estado}
           item={perguntasPlanas[estado.indice]}
           onResponder={responder}
+          onAnotar={anotar}
+          onConfirmar={confirmarEAvancar}
           onResponderTexto={responderTexto}
           onVoltar={voltar}
           onPularGrupo={pularGrupo}

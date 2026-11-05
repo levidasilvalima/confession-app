@@ -1,0 +1,46 @@
+{
+  "titulo": "Método de Confissão",
+  "dialogoInicial": [
+    { "quem": "Penitente", "texto": "Abençoai-me, Padre, porque pequei." },
+    {
+      "quem": "Sacerdote",
+      "texto": "Dominus sit in corde tuo et in labiis tuis, ut rite confitearis omnia peccata tua. In nomine Patris, et Filii, ✠ et Spiritus Sancti.",
+      "lingua": "la"
+    },
+    {
+      "quem": "Sacerdote",
+      "texto": "Que o Senhor esteja em teus lábios e em teu coração para que possas confessar bem todos os teus pecados. Em nome do Pai, e do Filho, ✠ e do Espírito Santo."
+    },
+    { "quem": "Penitente", "texto": "Amém." }
+  ],
+  "confiteor": [
+    "Eu, pecador, confesso a Deus todo-poderoso, à bem-aventurada sempre Virgem Maria, ao bem-aventurado Miguel Arcanjo, ao bem-aventurado João Batista, aos Santos Apóstolos Pedro e Paulo, a todos os Santos, e a vós, Padre, que pequei muitas vezes por pensamentos, palavras e obras, por minha culpa, minha culpa, minha máxima culpa.",
+    "Portanto, peço e rogo à bem-aventurada sempre Virgem Maria, ao bem-aventurado Miguel Arcanjo, ao bem-aventurado João Batista, aos santos Apóstolos Pedro e Paulo, a todos os Santos, e a vós, Padre, que rogueis a Deus Nosso Senhor por mim."
+  ],
+  "ultimaConfissao": "Minha última Confissão foi há",
+  "ultimaConfissaoNota": "Dizer a data da última confissão, ao menos aproximadamente.",
+  "acusacaoNota": "Acuse-se dos pecados, dizendo o tipo de pecado, as circunstâncias que podem mudar a espécie e, se for grave, o número de vezes.",
+  "encerramento": "Acuso-me destes pecados, de todos os que não me lembro e dos de minha vida passada. Deles peço perdão a Deus, e a vós, Padre, a penitência e a absolvição.",
+  "praticaNota": "O Sacerdote faz uma pequena prática, dá os conselhos necessários e exorta o penitente à contrição e à confiança na misericórdia divina, incentivando-o ao amor para com Deus. Após as palavras do Padre, o penitente recita o ato de contrição:",
+  "atoContricao": [
+    "Senhor meu Jesus Cristo, Deus e homem verdadeiro, Criador e Redentor meu, por serdes vós quem sois, sumamente bom e digno de ser amado sobre todas as coisas, e porque vos amo e vos estimo, pesa-me, Senhor, de todo o meu coração, de vos ter ofendido; e proponho firmemente, ajudado com os auxílios de vossa divina graça, emendar-me e nunca mais tornar a vos ofender; espero alcançar de vossa infinita misericórdia o perdão de minhas culpas. Amém.",
+    "Meu Deus, porque sois infinitamente bom e amável, tenho muita pena por vos ter ofendido. Com a vossa graça, é o meu firme propósito não mais voltar a vos ofender. Amém."
+  ],
+  "absolvicaoNota": "O sacerdote recita a fórmula de absolvição (apenas para acompanhar):",
+  "absolvicaoLatim": [
+    "Misereatur tui omnípotens Deus, et dimíssis peccátis tuis, perdúcat te ad vitam ætérnam. Amen.",
+    "Indulgentiam, absolutiónem et remissiónem peccatórum tuórum tríbuat tibi omnípotens, et miséricors Dóminus. Amen.",
+    "Dominus noster Jesus Christus te absólvat: et ego auctoritáte ipsíus te absólvo ab omni vínculo excommunicatiónis, (suspensiónis,) et interdícti, in quantum possum, et tu índiges.",
+    "Deinde ego te absolvo a peccatis tuis, in nomine Patris, et Filii, ✠ et Spiritus Sancti. Amen.",
+    "Passio Dómini nostri Jesu Christi, mérita beátæ Maríæ Vírginis, et ómnium Sanctórum, quidquid boni féceris, et mali sustinúeris, sint tibi in remissiónem peccatórum, augméntum grátiæ, et præmium vitæ ætérnæ. Amen."
+  ],
+  "absolvicaoPortugues": [
+    "Que Deus todo-poderoso tenha piedade de ti e te perdoe os pecados e leve à vida eterna. Amém.",
+    "Que o Senhor todo-poderoso e misericordioso te perdoe e te absolva de todos os teus pecados. Amém.",
+    "Que Nosso Senhor Jesus Cristo te absolva e eu, por Sua autoridade, te absolvo de todo vínculo de excomunhão (suspensão) e interdito, enquanto posso e tu necessitas.",
+    "Por isso eu te absolvo dos teus pecados, em nome do Pai, ✠ do Filho, e do Espírito Santo. Amém.",
+    "Que a Paixão de Nosso Senhor Jesus Cristo, os méritos da bem-aventurada Virgem Maria, e de todos os santos te logrem, em tudo o que de bem praticares, e de mal suportares, a remissão dos pecados, um aumento de graça, e o prêmio da vida eterna. Amém."
+  ],
+  "despedida": "Ide em paz.",
+  "fonte": "Exame de Consciência para Adultos, Pe. Daniel"
+}
